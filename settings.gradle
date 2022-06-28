@@ -15,7 +15,10 @@ dependencyResolutionManagement {
 rootProject.name = "GithubUser"
 include ':app'
 include ':core'
+include ':core:core-ui'
+include ':core:core-navigation'
 include ':User'
 include ':User:user_domain'
 include ':User:user_data'
 include ':User:user_presentation'
+
