@@ -32,9 +32,8 @@ android {
             isMinifyEnabled = false
         }
     }
-    buildFeatures {
-        viewBinding = true
-    }
+
+    buildFeatures.viewBinding = true
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -55,6 +54,7 @@ dependencies {
     implementation(Retrofit.retrofit)
     implementation(Retrofit.okHttpLoggingInterceptor)
     implementation(Retrofit.moshiConverter)
+    implementation("androidx.legacy:legacy-support-v4:1.0.0")
 
     kapt(Room.roomCompiler)
     implementation(Room.roomKtx)
@@ -67,12 +67,11 @@ dependencies {
     implementation("androidx.navigation:navigation-ui-ktx:2.3.2")
 
     val lifecycle_version = "2.5.0-rc02"
-    // ViewModel
-    implementation("androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version")
+//     ViewModel
+//    implementation("androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version")
     // LiveData
     implementation("androidx.lifecycle:lifecycle-livedata:$lifecycle_version")
 
-    implementation(project(Modules.core))
     implementation(project(Modules.coreUi))
     implementation(project(Modules.coreNavigation))
     implementation(project(Modules.userPresentation))

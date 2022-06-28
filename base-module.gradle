@@ -21,6 +21,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    buildFeatures {
+        viewBinding = true
+    }
     compileOptions {
         coreLibraryDesugaringEnabled true
 
@@ -50,4 +53,10 @@ dependencies {
     androidTestImplementation Testing.mockk
     androidTestImplementation Testing.mockWebServer
     androidTestImplementation Testing.hiltTesting
+
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.2'
+
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.2'
 }
